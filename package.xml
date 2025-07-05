@@ -16,6 +16,8 @@
   <depend>vision_idl</depend> 
 
   <export>
-    <build_type>ament_cmake</build_type>
+	  <build_type>ament_cmake</build_type>
+	  <depend>arm_idl</depend>
+	  <depend>vision_idl</depend>
   </export>
 </package>
