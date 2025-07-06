@@ -14,10 +14,12 @@
 
   <depend>arm_idl</depend> 
   <depend>vision_idl</depend> 
+  <depend>nora_idl</depend>
 
   <export>
 	  <build_type>ament_cmake</build_type>
 	  <depend>arm_idl</depend>
 	  <depend>vision_idl</depend>
+	  <depend>nora_idl</depend>
   </export>
 </package>

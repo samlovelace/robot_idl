@@ -9,6 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(arm_idl REQUIRED)
 find_package(vision_idl REQUIRED)
+find_package(nora_idl REQUIRED)
 
-ament_export_dependencies(arm_idl vision_idl)
+ament_export_dependencies(arm_idl vision_idl nora_idl)
 ament_package()
