@@ -12,14 +12,9 @@
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
-  <depend>arm_idl</depend> 
-  <depend>vision_idl</depend> 
-  <depend>nora_idl</depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
 
   <export>
 	  <build_type>ament_cmake</build_type>
-	  <depend>arm_idl</depend>
-	  <depend>vision_idl</depend>
-	  <depend>nora_idl</depend>
   </export>
 </package>
