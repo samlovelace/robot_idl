@@ -1,0 +1,3 @@
+std_msgs/String object_type
+geometry_msgs/PointStamped obj_centroid_g
+sensor_msgs/PointCloud2 obj_points_g

@@ -1,9 +1,0 @@
-[submodule "src/arm_idl"]
-	path = src/arm_idl
-	url = https://github.com/samlovelace/arm_idl.git
-[submodule "src/vision_idl"]
-	path = src/vision_idl
-	url = https://github.com/samlovelace/vision_idl.git
-[submodule "src/nora_idl"]
-	path = src/nora_idl
-	url = https://github.com/samlovelace/nora_idl.git
