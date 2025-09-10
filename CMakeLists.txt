@@ -26,6 +26,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RobotState.msg"
   "msg/TaskPositionWaypoint.msg"
   "msg/Vec3.msg"
+  "msg/VehicleWaypoint.msg"
   DEPENDENCIES std_msgs geometry_msgs sensor_msgs
 )
 
