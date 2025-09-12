@@ -20,7 +20,7 @@ for module in "${REPOS[@]}"; do
     for repo in $repos; do
         if [ ! -d "$repo" ]; then
             echo "Cloning $repo..."
-            git clone "$REPO_BASE_URL/$repo.git" "$WORKSPACE_DIR/src/$repo"
+            git clone --recursive "$REPO_BASE_URL/$repo.git" "$WORKSPACE_DIR/src/$repo"
         else
             echo "$repo already exists."
         fi
