@@ -1,7 +1,7 @@
 #!/bin/bash
 
-REPO_BASE_URL="git@github.com:samlovelace"
-WORKSPACE_DIR=/home/sam/dev/cpp/robot_ws
+REPO_BASE_URL="https://github.com/samlovelace"
+WORKSPACE_DIR=/robot_ws
 
 # Declare associative array of modules
 declare -A MODULES
