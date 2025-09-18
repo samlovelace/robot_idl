@@ -28,7 +28,6 @@ for module in "${REPOS[@]}"; do
 	# run install script for each repo
 	cd "$WORKSPACE_DIR/src/$repo"
 	chmod +x setup.sh
-	#sudo ./setup.sh "$WORKSPACE_DIR"
-	./setup.sh "$WORKSPACE_DIR"
+	sudo ./setup.sh "$WORKSPACE_DIR"
     done
 done
