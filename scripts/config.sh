@@ -9,6 +9,7 @@ MODULES[autonomy]="neo cortex"
 MODULES[manipulation]="arm_configs arm"
 MODULES[perception]="vision"
 MODULES[vehicle]="abv_controller"
+MODULES[commander]="abv_teleop robot_commander"
 
 # Use passed arguments or default to all keys
 if [ "$#" -eq 0 ]; then
