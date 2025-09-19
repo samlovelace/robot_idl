@@ -30,6 +30,5 @@ for module in "${REPOS[@]}"; do
 	cd "$WORKSPACE_DIR/src/$repo"
 	chmod +x setup.sh
 	sudo ./setup.sh "$WORKSPACE_DIR"
-
     done
 done
