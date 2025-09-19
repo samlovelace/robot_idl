@@ -1,6 +1,13 @@
 #!/bin/bash
 set -e
 
+# Detect if running inside Docker
+if [ -f /.dockerenv ]; then
+    SUDO=""
+else
+    SUDO="sudo"
+fi
+
 source "$(dirname "$0")/config.sh" "$@"
 source "$(dirname "$0")/common.sh" "$@"
 
@@ -29,6 +36,6 @@ for module in "${REPOS[@]}"; do
 	# run install script for each repo
 	cd "$WORKSPACE_DIR/src/$repo"
 	chmod +x setup.sh
-	sudo ./setup.sh "$WORKSPACE_DIR"
+	$SUDO ./setup.sh "$WORKSPACE_DIR"
     done
 done
