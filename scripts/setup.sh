@@ -2,6 +2,7 @@
 set -e
 
 source "$(dirname "$0")/config.sh" "$@"
+source "$(dirname "$0")/common.sh" "$@"
 
 mkdir -p "$WORKSPACE_DIR/src"
 cd "$WORKSPACE_DIR/src"
