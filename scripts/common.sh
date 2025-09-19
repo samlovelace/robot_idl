@@ -37,25 +37,30 @@ install_ros() {
     dpkg-reconfigure -f noninteractive tzdata
 
     # --- Add Required Tools ---
-    apt install -y software-properties-common curl gnupg lsb-release
+    DEBIAN_FRONTEND=noninteractive apt install -y software-properties-common curl gnupg lsb-release
 
-    # --- Add Universe Repo ---
-    add-apt-repository universe
+    # --- Add Universe Repo (auto-confirm) ---
+    echo "[ROS] Adding universe repository..."
+    add-apt-repository -y universe
 
     # --- Add ROS 2 GPG Key ---
+    echo "[ROS] Adding ROS 2 GPG key..."
     curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key \
         -o /usr/share/keyrings/ros-archive-keyring.gpg
 
     # --- Add ROS 2 Repository ---
+    echo "[ROS] Adding ROS 2 repository..."
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] \
-        http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" \
+http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" \
         > /etc/apt/sources.list.d/ros2.list
+
     # --- Install ROS 2 Humble and Tools ---
+    echo "[ROS] Installing ROS 2 Humble and tools..."
     apt update
-    apt install -y ros-humble-desktop \
-                   python3-colcon-common-extensions \
-                   python3-rosdep \
-                   python3-vcstool
+    DEBIAN_FRONTEND=noninteractive apt install -y ros-humble-desktop \
+        python3-colcon-common-extensions \
+        python3-rosdep \
+        python3-vcstool
 
     # --- Source ROS Environment ---
     echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
