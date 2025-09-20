@@ -51,8 +51,8 @@ install_ros() {
     # --- Add ROS 2 Repository ---
     echo "[ROS] Adding ROS 2 repository..."
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] \
-http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" \
-        > /etc/apt/sources.list.d/ros2.list
+          http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" \
+          > /etc/apt/sources.list.d/ros2.list
 
     # --- Install ROS 2 Humble and Tools ---
     echo "[ROS] Installing ROS 2 Humble and tools..."
@@ -67,3 +67,15 @@ http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" \
     source /opt/ros/humble/setup.bash
     echo "[✔] ROS 2 Humble installed and environment sourced."
 }
+
+install_deps()
+{
+    # treat ros2 install special 
+    check_and_install "ros-humble-desktop" "install_ros"
+
+    # Loop through and install each
+    for pkg in "${DEPENDENCIES[@]}"; do
+        check_and_install "$pkg"
+    done
+}
+

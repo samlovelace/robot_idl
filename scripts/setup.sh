@@ -14,7 +14,6 @@ source "$(dirname "$0")/common.sh" "$@"
 mkdir -p "$WORKSPACE_DIR/src"
 cd "$WORKSPACE_DIR/src"
 
-echo "Cloning modules: ${REPOS[*]}"
 for module in "${REPOS[@]}"; do
     echo "Processing module: $module"
 
@@ -32,10 +31,27 @@ for module in "${REPOS[@]}"; do
         else
             echo "$repo already exists."
         fi
-	
-	# run install script for each repo
-	cd "$WORKSPACE_DIR/src/$repo"
-	chmod +x setup.sh
-	$SUDO ./setup.sh "$WORKSPACE_DIR"
+
+        cd "$WORKSPACE_DIR/src/$repo"
+        chmod +x deps.sh
+        source deps.sh
+
+        # Install dependencies if defined
+        if [ "${#DEPENDENCIES[@]}" -gt 0 ]; then
+            for pkg in "${DEPENDENCIES[@]}"; do
+                check_and_install "$pkg"
+            done
+        fi
+
+        # Run custom build steps if defined
+        if declare -f run_custom_build_steps > /dev/null; then
+            echo "Running custom build steps for $repo..."
+            run_custom_build_steps
+        fi
+
+        # build pkg
+        cd "$WORKSPACE_DIR"
+        colcon build --packages-select robot_idl "$repo"
+
     done
 done
