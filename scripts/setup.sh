@@ -36,6 +36,9 @@ for module in "${REPOS[@]}"; do
         chmod +x deps.sh
         source deps.sh
 
+        # treat ros2 install special 
+        check_and_install "ros-humble-desktop" "install_ros"
+
         # Install dependencies if defined
         if [ "${#DEPENDENCIES[@]}" -gt 0 ]; then
             for pkg in "${DEPENDENCIES[@]}"; do
