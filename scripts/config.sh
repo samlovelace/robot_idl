@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPO_BASE_URL="https://github.com/samlovelace"
-WORKSPACE_DIR=/robot_ws
+WORKSPACE_DIR=robot_ws
 
 # Declare associative array of modules
 declare -A MODULES
