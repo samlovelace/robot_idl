@@ -24,6 +24,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Euler.msg"
   "msg/FoundObjectResponse.msg"
   "msg/JointPositionWaypoint.msg"
+  "msg/JointVelocityWaypoint.msg"
   "msg/PlanCommand.msg"
   "msg/PlanResponse.msg"
   "msg/Quaternion.msg"
