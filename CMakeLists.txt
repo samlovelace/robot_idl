@@ -23,6 +23,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Enable.msg"
   "msg/Euler.msg"
   "msg/FoundObjectResponse.msg"
+  "msg/GpcGoal.msg"
   "msg/JointPositionWaypoint.msg"
   "msg/JointVelocityWaypoint.msg"
   "msg/PlanCommand.msg"
