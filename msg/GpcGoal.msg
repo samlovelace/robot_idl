@@ -19,4 +19,9 @@ geometry_msgs/Twist twist_ref                  # optional task-space twist
 float64[] tol_abs                              # per-element absolute tol (state or pose components)
 float64[] tol_rel                              # per-element relative tol
 
+# Trajectory Types available from gpc_core 
+uint8 trajectory_type
+uint8 TRAJ_LINE2D=0
+uint8 TRAJ_CIRCLE2D=1
+# TODO: add more types here and in gpc_core 
 
