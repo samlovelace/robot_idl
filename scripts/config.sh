@@ -6,7 +6,7 @@ WORKSPACE_DIR=robot_ws
 # Declare associative array of modules
 declare -A MODULES
 MODULES[autonomy]="neo cortex"
-MODULES[manipulation]="arm_configs arm"
+MODULES[manipulation]="arm"
 MODULES[perception]="vision"
 MODULES[vehicle]="abv_controller"
 MODULES[commander]="abv_teleop robot_commander"
