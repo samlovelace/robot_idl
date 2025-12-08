@@ -27,6 +27,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/JointPositionWaypoint.msg"
   "msg/JointVelocityWaypoint.msg"
   "msg/ManipulationCommand.msg"
+  "msg/ManipulatorState.msg"
   "msg/PlanCommand.msg"
   "msg/PlanResponse.msg"
   "msg/Quaternion.msg"

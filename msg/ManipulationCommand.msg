@@ -4,6 +4,8 @@ uint8 CMD_PICK=0
 uint8 CMD_PLACE=1 # TODO: add fields for this
 uint8 CMD_PLACE_REL=2 # TODO: add fields for this 
 
+uint8 EXE_PICK=5
+
 # Object metadata
 string object_id
 string object_type
