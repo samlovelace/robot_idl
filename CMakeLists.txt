@@ -15,6 +15,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/AbvCommand.msg"
+  "msg/AbvControllerStatus.msg"
   "msg/AbvResponse.msg"
   "msg/AbvState.msg"
   "msg/AbvVec3.msg"
