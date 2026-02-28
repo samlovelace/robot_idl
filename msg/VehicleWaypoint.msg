@@ -1,2 +1,3 @@
 Vec3 position
-Quaternion orientation
+Euler euler
+Quaternion quat
