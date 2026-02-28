@@ -14,14 +14,9 @@ find_package(sensor_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/AbvCommand.msg"
-  "msg/AbvControllerStatus.msg"
-  "msg/AbvGuidanceCommand.msg"
-  "msg/AbvResponse.msg"
-  "msg/AbvState.msg"
-  "msg/AbvVec3.msg"
   "msg/Command.msg"
   "msg/CommandAck.msg"
+  "msg/ControllerStatus.msg"
   "msg/Enable.msg"
   "msg/Euler.msg"
   "msg/FoundObjectResponse.msg"
