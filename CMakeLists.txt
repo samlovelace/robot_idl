@@ -14,7 +14,6 @@ find_package(sensor_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Command.msg"
   "msg/CommandAck.msg"
   "msg/ControllerStatus.msg"
   "msg/Enable.msg"
@@ -33,6 +32,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/TaskVelocityWaypoint.msg"
   "msg/Vec3.msg"
   "msg/VehicleWaypoint.msg"
+  "msg/VisionCommand.msg"
   DEPENDENCIES std_msgs geometry_msgs sensor_msgs
 )
 
